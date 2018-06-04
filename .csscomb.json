@@ -1,0 +1,42 @@
+{
+  "remove-empty-rulesets": true,
+  "always-semicolon": true,
+  "color-case": "lower",
+  "block-indent": "  ",
+  "color-shorthand": true,
+  "element-case": "lower",
+  "quotes": "double",
+  "sort-order-fallback": "abc",
+  "sort-order": [
+    [
+      "$variable"
+    ],
+    [
+      "$import",
+      "$extend",
+      "$include"
+    ],
+    [
+      "..."
+    ],
+    [
+      "$selector"
+    ],
+    [
+      "$include media"
+    ]
+  ],
+  "space-before-colon": "",
+  "space-after-colon": " ",
+  "space-before-combinator": " ",
+  "space-after-combinator": " ",
+  "space-between-declarations": "\n",
+  "space-before-opening-brace": " ",
+  "space-after-opening-brace": "\n",
+  "space-after-selector-delimiter": " ",
+  "space-before-selector-delimiter": "",
+  "space-before-closing-brace": "\n",
+  "strip-spaces": true,
+  "tab-size": true,
+  "unitless-zero": true
+}

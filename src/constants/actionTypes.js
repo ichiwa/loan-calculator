@@ -1,0 +1,1 @@
+export const UPDATE_PARAMS = 'UPDATE_PARAMS';
