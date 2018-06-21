@@ -28,8 +28,16 @@ button {
 
 .text-center {
   text-align: center!important;
-  width: 100%;
 }
+
+.text-right {
+  text-align: right!important;
+}
+
+.text-left {
+  text-align: left!important;
+}
+
 
 .clearfix:after {
   clear: both;

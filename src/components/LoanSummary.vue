@@ -1,10 +1,20 @@
 <template>
   <div class="component">
     <h2>{{ title }}</h2>
-    <h3>支払い総額 : <span>{{ getTotalPayment() | numberFormat }}</span><small> 円 </small></h3>
-    <h4>頭金 : <span>{{ initialDeposit | numberFormat }}</span><small> 円 </small></h4>
-    <h4>元金 : <span>{{ getTotalPrincipal() | numberFormat }}</span><small> 円 </small></h4>
-    <h4>金利合計 : <span>{{ getTotalInterestPayment() | numberFormat }}</span><small> 円 </small></h4>
+    <h4 class="text-right">頭金 :
+      <span>{{ initialDeposit | numberFormat }}</span><small> 円 </small>
+    </h4>
+    <h4 class="text-right">元金 :
+      <span>{{ getTotalPrincipal() | numberFormat }}</span><small> 円 </small>
+    </h4>
+    <h4 class="text-right">金利合計 :
+      <span>{{ getTotalInterestPayment() | numberFormat }}</span><small> 円 </small>
+    </h4>
+    <h3 class="text-right">支払い総額 :
+      <span class="total-payment">
+        <span>{{ getTotalPayment() | numberFormat }}</span><small> 円 </small>
+      </span>
+    </h3>
   </div>
 </template>
 
@@ -39,12 +49,23 @@ export default {
 .component {
   height: auto;
   padding: 10px 10px 10px 20px;
-  width: 100%;
+  width: 94%;
 }
 @media screen and (max-width: 1024px) {
   .component {
     border-top: 3px solid #3f3f3f;
-    width: 100%;
   }
+}
+.total-payment {
+  border-bottom: 3px solid #3f3f3f;
+}
+.total-payment {
+  border-bottom: 3px solid #3f3f3f;
+}
+.total-payment {
+  border-bottom: 3px solid #3f3f3f;
+}
+.total-payment {
+  border-bottom: 3px solid #3f3f3f;
 }
 </style>
