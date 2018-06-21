@@ -37,7 +37,12 @@ export default {
   }),
   methods: {
     getTotalPayment() {
-      return this.$store.getters.getTotalPayment();
+      let val = 0;
+      val += this.initialDeposit;
+      val += this.charges;
+      val += this.$store.getters.getTotalPrincipal();
+      val += this.$store.getters.getTotalInterestPayment();
+      return val;
     },
     getTotalPrincipal() {
       return this.$store.getters.getTotalPrincipal();
