@@ -1,35 +1,61 @@
 <template>
-  <div id="app">
-    <Sidebar />
-    <router-view/>
+  <div class="main">
+    <div id="app" class="app">
+      <Header />
+      <Sidebar />
+      <router-view/>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import 'normalize.css';
 import '@/assets/style/global.scss';
+import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
+import Footer from '@/components/Footer';
 
 export default {
-  components: { Sidebar },
+  components: { Header, Sidebar, Footer },
   name: 'App',
+  data() {
+    return {
+    };
+  },
 };
 </script>
 
 <style>
-body {
-  font-family: 'Sawarabi Mincho', 'Avenir', Helvetica, Arial, sans-serif;
+html, body {
+  font-family: "Sawarabi Mincho", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  height: 100%;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
-#app {
+@media screen and (max-width: 1024px) {
+  html, body {
+    overflow: initial;
+  }
+}
+</style>
+
+<style scoped lang="scss">
+.app {
   height: 100%;
   margin: 0 auto;
-  width: 980px;
+  overflow: hidden;
+  width: 100%;
 }
-#app:after {
+@media screen and (max-width: 1024px) {
+  .app {
+    height: auto;
+  }
+}
+.app:after {
   clear: both;
-  content: '';
+  content: "";
   display: block;
 }
 </style>

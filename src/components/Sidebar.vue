@@ -1,6 +1,5 @@
 <template>
 <div class="sidebar">
-  <h1>{{ title }}</h1>
   <ParamsForm/>
 </div>
 </template>
@@ -12,19 +11,23 @@ export default {
   name: 'Sidebar',
   data() {
     return {
-      title: 'Loan Calculator',
     };
   },
   components: { ParamsForm },
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .sidebar {
-  border: 1px solid #ccc;
   float: left;
-  margin: 15px 0 15px 15px;
+  height: 85%;
   padding: 15px;
-  width: 240px;
+  width: 30%;
+}
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    padding: 5px;
+    width: 100%;
+  }
 }
 </style>
