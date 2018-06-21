@@ -28,7 +28,7 @@ export default {
 
 <style>
 html, body {
-  font-family: "Sawarabi Mincho", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Sawarabi Gothic", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   height: 100%;
   -moz-osx-font-smoothing: grayscale;

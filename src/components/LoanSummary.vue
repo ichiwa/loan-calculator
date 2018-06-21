@@ -49,7 +49,7 @@ export default {
 .component {
   height: auto;
   padding: 10px 10px 10px 20px;
-  width: 94%;
+  width: 92%;
 }
 @media screen and (max-width: 1024px) {
   .component {
