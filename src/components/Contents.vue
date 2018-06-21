@@ -34,6 +34,7 @@ export default {
 @media screen and (max-width: 1024px) {
   .contents {
     border-left: 0;
+    height: auto;
     margin-top: 10px;
     width: 100%;
   }

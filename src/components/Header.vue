@@ -10,7 +10,7 @@ export default {
   name: 'Header',
   data() {
     return {
-      title: 'ローン計算機',
+      title: '住宅ローンシミュレータ',
     };
   },
 };

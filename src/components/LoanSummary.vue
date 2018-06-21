@@ -4,6 +4,9 @@
     <h4 class="text-right">頭金 :
       <span>{{ initialDeposit | numberFormat }}</span><small> 円 </small>
     </h4>
+    <h4 class="text-right">諸経費 :
+      <span>{{ charges | numberFormat }}</span><small> 円 </small>
+    </h4>
     <h4 class="text-right">元金 :
       <span>{{ getTotalPrincipal() | numberFormat }}</span><small> 円 </small>
     </h4>
@@ -30,6 +33,7 @@ export default {
   },
   computed: mapState({
     initialDeposit: state => state.params.initialDeposit,
+    charges: state => state.params.charges,
   }),
   methods: {
     getTotalPayment() {
@@ -50,6 +54,10 @@ export default {
   height: auto;
   padding: 10px 10px 10px 20px;
   width: 92%;
+
+  h3, h4 {
+    font-weight: initial;
+  }
 }
 @media screen and (max-width: 1024px) {
   .component {
@@ -58,14 +66,6 @@ export default {
 }
 .total-payment {
   border-bottom: 3px solid #3f3f3f;
-}
-.total-payment {
-  border-bottom: 3px solid #3f3f3f;
-}
-.total-payment {
-  border-bottom: 3px solid #3f3f3f;
-}
-.total-payment {
-  border-bottom: 3px solid #3f3f3f;
+  font-weight: bold;
 }
 </style>

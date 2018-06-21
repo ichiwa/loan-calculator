@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-    <h2>{{ title }}</h2>
+    <h2>{{ title }}<span class="description">{{ description }}</span></h2>
     <table class="loan-table">
       <thead>
         <tr>
@@ -30,6 +30,7 @@ export default {
   data() {
     return {
       title: '試算表',
+      description: '初回のみ頭金と諸費用が含まれています',
     };
   },
   computed: {
@@ -46,7 +47,7 @@ export default {
 <style scoped lang="scss">
 .component {
   border-top: 3px solid #3f3f3f;
-  height: auto;
+  height: 400px;
   padding: 10px 10px 10px 20px;
   width: 100%;
 }
@@ -55,8 +56,14 @@ export default {
     width: 100%;
   }
 }
+.description {
+  font-size: 0.85rem;
+  font-weight: initial;
+  margin-left: 20px;
+}
 .loan-table {
   border-collapse: collapse;
+  margin-top: 8px;
   position: relative;
   table-layout: fixed;
   width: auto;
@@ -73,7 +80,7 @@ export default {
   tbody {
     border: 2px solid #3f3f3f;
     border-top: 0;
-    max-height: 35vh;
+    max-height: 30vh;
     overflow-y: scroll;
     width: 100%;
   }
@@ -103,7 +110,7 @@ export default {
   .loan-table {
     margin-left: -1%;
     tbody {
-      max-height: 40vh;
+      max-height: 39vh;
     }
     th, td {
       padding: 6px;
@@ -119,6 +126,16 @@ export default {
     }
     .payment {
       width: 26vw;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .component {
+    padding: 10px 10px 10px 10px;
+  }
+  .loan-table {
+    tbody {
+      max-height: 43vh;
     }
   }
 }
