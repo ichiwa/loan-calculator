@@ -1,7 +1,7 @@
 <template>
-<div class="sidebar">
-  <ParamsForm/>
-</div>
+  <div class="sidebar">
+    <ParamsForm/>
+  </div>
 </template>
 
 <script>
@@ -9,11 +9,10 @@ import ParamsForm from '@/components/ParamsForm';
 
 export default {
   name: 'Sidebar',
-  data() {
-    return {
-    };
-  },
   components: { ParamsForm },
+  data() {
+    return {};
+  },
 };
 </script>
 

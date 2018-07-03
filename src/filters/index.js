@@ -1,8 +1,5 @@
-
-const numberFormat = (val) => {
+const numberFormat = val => {
   return val.toLocaleString();
 };
 
-export {
-  numberFormat,
-};
+export { numberFormat };

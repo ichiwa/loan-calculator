@@ -11,14 +11,14 @@ import LoanTable from '@/components/LoanTable';
 
 export default {
   name: 'Contents',
+  components: {
+    LoanSummary,
+    LoanTable,
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
     };
-  },
-  components: {
-    LoanSummary,
-    LoanTable,
   },
 };
 </script>
@@ -41,7 +41,7 @@ export default {
 }
 .contents:after {
   clear: both;
-  content: "";
+  content: '';
   display: block;
 }
 </style>

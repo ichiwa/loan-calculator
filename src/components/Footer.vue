@@ -2,13 +2,12 @@
   <footer>
     <div class="component clearfix">
       <div class="left">{{ owner }}</div>
-      <a class="right" :href="github">source code</a>
+      <a :href="github" class="right">source code</a>
     </div>
   </footer>
 </template>
 
 <script>
-
 export default {
   name: 'Footer',
   data() {
@@ -34,10 +33,8 @@ footer {
     position: initial;
   }
 }
-
 .component {
   padding: 14px;
   width: auto;
 }
-
 </style>

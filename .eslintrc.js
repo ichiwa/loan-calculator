@@ -2,15 +2,20 @@
 
 module.exports = {
   root: true,
-  parser: 'vue-eslint-parser',
+  parserOptions: {
+    sourceType: 'module'
+  },
   env: {
     browser: true,
   },
   // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential', 'airbnb-base'],
+  extends: [
+    'plugin:vue/recommended',
+		'prettier'
+  ],
   // required to lint *.vue files
-  plugins: ['vue'],
+  plugins: ['prettier', 'vue'],
   // check if imports actually resolve
   settings: {
     'import/resolver': {
@@ -21,15 +26,7 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
-    // don't require .vue extension when importing
-    'import/extensions': [
-      'error',
-      'always',
-      {
-        js: 'never',
-        vue: 'never',
-      },
-    ],
+    'prettier/prettier': 'error',
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
     'no-param-reassign': [
@@ -43,19 +40,11 @@ module.exports = {
         ],
       },
     ],
-    // allow optionalDependencies
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        optionalDependencies: false,
-      },
-    ],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-console': 0,
     'spaced-comment': 0,
     'no-unused-vars': 0,
-    'no-trailing-spaces': ['error', { skipBlankLines: true }],
     'import/prefer-default-export': 0,
     'arrow-body-style': 0,
     'arrow-parens': 0,
@@ -63,7 +52,7 @@ module.exports = {
     'no-mixed-operators': 0,
     'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
     'object-shorthand': 0,
-    'eol-last': 'off',
     'func-names': 0,
+    'vue/max-attributes-per-line': 0,
   },
 };

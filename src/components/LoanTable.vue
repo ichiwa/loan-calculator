@@ -4,6 +4,7 @@
     <table class="loan-table">
       <thead>
         <tr>
+          <th class="year">年</th>
           <th class="count">回数</th>
           <th class="principal">元金</th>
           <th class="interest">金利</th>
@@ -12,6 +13,13 @@
       </thead>
       <tbody>
         <tr v-for="index in getTotalPeriod()" :key="index">
+          <td
+            v-if="((index-1) % 12) == 0 || index == 1"
+            class="year"
+            rowspan="12"
+          >
+            {{ Math.floor(index / 12) + 1 }}
+          </td>
           <td class="count">{{ index }}</td>
           <td class="principal">{{ getMonthlyPrincipal(index) | numberFormat }}円</td>
           <td class="interest">{{ getMonthlyInterest(index) | numberFormat }}円</td>
@@ -67,7 +75,8 @@ export default {
   position: relative;
   table-layout: fixed;
   width: auto;
-  thead, tbody {
+  thead,
+  tbody {
     display: block;
     width: 100%;
   }
@@ -90,20 +99,33 @@ export default {
   tr:nth-child(even) td {
     background: #e3e3e3;
   }
-  th, td {
+  th,
+  td {
     padding: 14px;
   }
+  th.year {
+    width: 5vw;
+  }
+  td.year {
+    font-size: 1.1rem;
+    width: 5vw;
+    border-top: 1px solid #3f3f3f;
+    border-right: 1px solid #3f3f3f;
+  }
+  tr:nth-child(1) > td.year {
+    border-top: 0;
+  }
   .count {
-    width: 10vw;
+    width: 5vw;
   }
   .principal {
-    width: 15vw;
+    width: 14vw;
   }
   .interest {
-    width: 15vw;
+    width: 14vw;
   }
   .payment {
-    width: 15vw;
+    width: 14vw;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -112,7 +134,8 @@ export default {
     tbody {
       max-height: 39vh;
     }
-    th, td {
+    th,
+    td {
       padding: 6px;
     }
     .count {
@@ -153,5 +176,4 @@ export default {
     }
   }
 }
-
 </style>

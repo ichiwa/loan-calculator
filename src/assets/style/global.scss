@@ -2,7 +2,6 @@ input {
   border: 2px solid #3f3f3f;
   margin-right: 10px;
   padding: 3px 6px;
-  width: 90%;
 }
 
 label {
@@ -26,6 +25,12 @@ button {
   }
 }
 
+.form-control {
+  margin-bottom: 4px;
+  margin-top: 4px;
+  text-align: center!important;
+}
+
 .text-center {
   text-align: center!important;
 }
@@ -37,7 +42,6 @@ button {
 .text-left {
   text-align: left!important;
 }
-
 
 .clearfix:after {
   clear: both;

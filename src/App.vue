@@ -17,25 +17,26 @@ import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
 
 export default {
-  components: { Header, Sidebar, Footer },
   name: 'App',
+  components: { Header, Sidebar, Footer },
   data() {
-    return {
-    };
+    return {};
   },
 };
 </script>
 
 <style>
-html, body {
-  font-family: "Sawarabi Gothic", "Avenir", Helvetica, Arial, sans-serif;
+html,
+body {
+  font-family: 'Sawarabi Gothic', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   height: 100%;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
-  html, body {
+  html,
+  body {
     overflow: initial;
   }
 }
@@ -55,7 +56,7 @@ html, body {
 }
 .app:after {
   clear: both;
-  content: "";
+  content: '';
   display: block;
 }
 </style>
