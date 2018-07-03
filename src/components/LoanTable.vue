@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-    <h2>{{ title }}<span class="description">{{ description }}</span></h2>
+    <h2 class="title">{{ title }}<span class="description">{{ description }}</span></h2>
     <table class="loan-table">
       <thead>
         <tr>
@@ -53,16 +53,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.title {
+  padding-left: 20px;
+}
 .component {
   border-top: 3px solid #3f3f3f;
   height: 400px;
-  padding: 10px 10px 10px 20px;
   width: 100%;
-}
-@media screen and (max-width: 1024px) {
-  .component {
-    width: 100%;
-  }
 }
 .description {
   font-size: 0.85rem;
@@ -71,6 +68,7 @@ export default {
 }
 .loan-table {
   border-collapse: collapse;
+  margin-left: 10px;
   margin-top: 8px;
   position: relative;
   table-layout: fixed;
@@ -107,10 +105,10 @@ export default {
     width: 5vw;
   }
   td.year {
+    border-right: 1px solid #3f3f3f;
+    border-top: 1px solid #3f3f3f;
     font-size: 1.1rem;
     width: 5vw;
-    border-top: 1px solid #3f3f3f;
-    border-right: 1px solid #3f3f3f;
   }
   tr:nth-child(1) > td.year {
     border-top: 0;
@@ -129,8 +127,12 @@ export default {
   }
 }
 @media screen and (max-width: 1024px) {
+  .component {
+    font-size: 0.8rem;
+    width: 100%;
+  }
   .loan-table {
-    margin-left: -1%;
+    margin-left: 0;
     tbody {
       max-height: 39vh;
     }
@@ -154,7 +156,7 @@ export default {
 }
 @media screen and (max-width: 320px) {
   .component {
-    padding: 10px 10px 10px 10px;
+    padding: 0;
   }
   .loan-table {
     tbody {

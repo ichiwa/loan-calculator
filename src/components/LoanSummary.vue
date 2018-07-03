@@ -64,7 +64,8 @@ export default {
     width: 92%;
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     font-weight: initial;
   }
 }
